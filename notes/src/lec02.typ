@@ -39,7 +39,13 @@ Converting it to proposition logic we denote it as $ phi_1,dots,phi_n tack.doubl
 
 == $section$ Natural Deduction
 
-Now we move on to *syntactic proofs / 语法证明*. Some deduction rules are $ (phi quad phi->psi)/(psi), quad (phi quad psi)/(phi and psi), quad (phi and psi)/phi, quad (phi and psi)/psi, quad [phi]/(phi->psi), quad ([not phi])/phi. $ An example of proof is proving $tack ((phi and psi)->phi):$ $ [phi and psi]/phi/((phi and psi)->phi). $
+Now we move on to *syntactic proofs / 语法证明*. Some deduction rules are $ (phi quad phi->psi)/(psi), quad (phi quad psi)/(phi and psi), quad (phi and psi)/phi, quad (phi and psi)/psi, quad [phi]/(phi->psi), quad ([not phi] perp)/phi, quad perp/phi. $ An example of proof is proving $tack ((phi and psi)->phi):$ $ [phi and psi]/phi/((phi and psi)->phi). $
+
+For deduction in a listed format, use some indentation for hypothesis. In this case, nested hypothesis need to be consumed first.
+
+For our syntax and semantic systems, we hope it satisfies
+- Soundness: if $Gamma tack phi,$ then $Gamma tack.double phi.$
+- Completeness: if $Gamma tack.double phi,$ then $Gamma tack phi.$
 
 == $section$ System K
 #linebreak()
